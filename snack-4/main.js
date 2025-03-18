@@ -57,7 +57,7 @@ console.log(ages);
 
 const summedAges = ages.reduce((acc, num) => {
     return acc + num
-})
+}, 0)
 console.log(summedAges);
 
 const averageAge = summedAges / 4

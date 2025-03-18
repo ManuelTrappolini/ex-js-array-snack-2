@@ -2,7 +2,7 @@
 //ritorna una promise che risolve un array di libri (books).
 //Testala con l’array [2, 13, 7, 21, 19] .
 
-ids = [2, 13, 7, 21, 19]
+const ids = [2, 13, 7, 21, 19]
 
 async function getBooks(array) {
     try {
@@ -11,6 +11,7 @@ async function getBooks(array) {
                 .then(res => res.json())
         )
         const books = await Promise.all(bookPromises)
+
         console.log(books);
 
         return books
@@ -21,5 +22,4 @@ async function getBooks(array) {
 }
 
 getBooks(ids)
-
 

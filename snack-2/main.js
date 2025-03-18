@@ -50,12 +50,12 @@ const books = [
     },
 ];
 
-const availableBooks = books.filter(book => book.available = 'true')
+const availableBooks = books.filter(book => book.available == true)
 console.log('availableBooks:', availableBooks);
 
 const discountedBooks = availableBooks.map(book => {
     const price = parseFloat(book.price.replace('€', ''))
-    const discountedPrice = (price * 0.8).toFixed(1)
+    const discountedPrice = (price * 0.8).toFixed(2)
     return { ...book, discountedPrice: `${discountedPrice} €` }
 })
 console.log('discountedBooks:', discountedBooks);

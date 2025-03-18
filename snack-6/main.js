@@ -62,10 +62,7 @@ booksByPrice = books.sort((a, b) => {
 })
 //console.log('booksByPrice', booksByPrice);
 
-booksByPrice.sort((a, b) => {
-    return b.available - a.available
-
-})
+booksByPrice.sort((a, b) => a.available === b.available ? 0 : a.available ? -1 : 1)
 
 console.log('booksByPrice', booksByPrice);
 
